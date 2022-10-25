@@ -185,13 +185,15 @@ void sim800_init()
 
 
 	flag_OK_Status = 0;
-	if (dont_continue != 1) {
+	if (dont_continue != 1) 
+	{
 		do {
 			snprintf((char *)gsm_tx_buffer, sizeof(gsm_tx_buffer), "%s\r\n", "ATE1");
 			HAL_UART_Transmit(&huart3, gsm_tx_buffer, strlen((const char *)gsm_tx_buffer), HAL_MAX_DELAY);
 			HAL_Delay(1000);
 			attempts_count++;
-			if (attempts_count >= 10) {
+			if (attempts_count >= 10) 
+			{
 				dont_continue = 1;
 				break;
 			}
@@ -225,7 +227,8 @@ void sim800_init()
 			HAL_UART_Transmit(&huart3, gsm_tx_buffer, strlen((const char *)gsm_tx_buffer), HAL_MAX_DELAY);
 			HAL_Delay(1000);
 			attempts_count++;
-			if (attempts_count >= 10) {
+			if (attempts_count >= 10) 
+			{
 				dont_continue = 1;
 				break;
 			}
@@ -242,13 +245,15 @@ void sim800_init()
 	HAL_Delay(300);
 
 	flag_OK_Status = 0;
-	if (dont_continue != 1) {
+	if (dont_continue != 1) 
+	{
 		do {
 			snprintf((char *)gsm_tx_buffer, sizeof(gsm_tx_buffer), "%s\r\n", "AT+SAPBR=3,1,\"Contype\", \"GPRS\"");
 			HAL_UART_Transmit(&huart3, gsm_tx_buffer, strlen((const char *)gsm_tx_buffer), HAL_MAX_DELAY);
 			HAL_Delay(1000);
 			attempts_count++;
-			if (attempts_count >= 10) {
+			if (attempts_count >= 10) 
+			{
 				dont_continue = 1;
 				break;
 			}
@@ -264,7 +269,8 @@ void sim800_init()
 			HAL_UART_Transmit(&huart3, gsm_tx_buffer, strlen((const char *)gsm_tx_buffer), HAL_MAX_DELAY);
 			HAL_Delay(1000);
 			attempts_count++;
-			if (attempts_count >= 10) {
+			if (attempts_count >= 10) 
+			{
 				dont_continue = 1;
 				break;
 			}
@@ -284,14 +290,16 @@ void sim800_init()
 	HAL_Delay(300);
 
 	flag_OK_Status = 0;
-	if (dont_continue != 1) {
+	if (dont_continue != 1) 
+	{
 		snprintf((char *)gsm_tx_buffer, sizeof(gsm_tx_buffer), "%s\r\n", "AT+SAPBR=2,1"); //Show Ip
 		HAL_UART_Transmit(&huart3, gsm_tx_buffer, strlen((const char *)gsm_tx_buffer), HAL_MAX_DELAY);
 
 		do {
 			HAL_Delay(1000);
 			attempts_count++;
-			if (attempts_count >= 50) {
+			if (attempts_count >= 50) 
+			{
 				dont_continue = 1;
 				break;
 			}
@@ -319,13 +327,15 @@ void prayer_time_request()
 
 
 	flag_OK_Status = 0;
-	if (dont_continue != 1) {
+	if (dont_continue != 1) 
+	{
 		do {
 			snprintf((char *)gsm_tx_buffer, sizeof(gsm_tx_buffer), "%s\r\n", "AT+HTTPINIT");
 			HAL_UART_Transmit(&huart3, gsm_tx_buffer, strlen((const char *)gsm_tx_buffer), HAL_MAX_DELAY);
 			HAL_Delay(1000);
 			attempts_count++;
-			if (attempts_count >= 10) {
+			if (attempts_count >= 10) 
+			{
 				dont_continue = 1;
 				break;
 			}
@@ -337,13 +347,15 @@ void prayer_time_request()
 
 
 	flag_OK_Status = 0;
-	if (dont_continue != 1) {
+	if (dont_continue != 1) 
+	{
 		do {
 			snprintf((char *)gsm_tx_buffer, sizeof(gsm_tx_buffer), "%s\r\n", "AT+HTTPPARA=\"CID\",1");
 			HAL_UART_Transmit(&huart3, gsm_tx_buffer, strlen((const char *)gsm_tx_buffer), HAL_MAX_DELAY);
 			HAL_Delay(1000);
 			attempts_count++;
-			if (attempts_count >= 10) {
+			if (attempts_count >= 10) 
+			{
 				dont_continue = 1;
 				break;
 			}
