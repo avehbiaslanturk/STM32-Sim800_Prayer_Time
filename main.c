@@ -188,7 +188,7 @@ void sim800_init()
 	if (dont_continue != 1) 
 	{
 		do {
-			snprintf((char *)gsm_tx_buffer, sizeof(gsm_tx_buffer), "%s\r\n", "ATE1");
+			snprintf((char *)gsm_tx_buffer, sizeof(gsm_tx_buffer), "%s\r\n", "ATE0");
 			HAL_UART_Transmit(&huart3, gsm_tx_buffer, strlen((const char *)gsm_tx_buffer), HAL_MAX_DELAY);
 			HAL_Delay(1000);
 			attempts_count++;
